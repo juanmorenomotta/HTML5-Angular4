@@ -7,14 +7,15 @@ import {ActivatedRoute } from '@angular/router';
 })
 export class ItemComponent{
 
+  item:any = undefined;
+
   constructor( private route: ActivatedRoute) {
 
     this.route.params.subscribe( parametros => {
       console.log( parametros );
+      console.log( parametros['id'] );
     })
 
   }
-
-
 
 }
