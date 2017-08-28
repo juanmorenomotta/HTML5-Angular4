@@ -12,8 +12,8 @@ export class ProductosService {
   }
 
 
-  public cargar_producto( id: string ){
-    return this.http.get("https://paginaweb-c5ffe.firebaseio.com/productos.json");
+  public cargar_producto( cod: string ){
+    return this.http.get(`https://paginaweb-c5ffe.firebaseio.com/productos/${ cod }.json`);
   }
 
   public cargar_productos(){
